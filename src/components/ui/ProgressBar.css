@@ -1,0 +1,34 @@
+/* STUDIO OS — Archival Animated Progress Bars */
+
+.studio-progress-track {
+  width: 100%;
+  background-color: var(--color-warm-paper-recessed);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.studio-progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: width;
+}
+
+.studio-progress-fill--sage {
+  background-color: var(--color-sage);
+}
+
+.studio-progress-fill--vermilion {
+  background-color: var(--color-studio-vermilion);
+}
+
+.studio-progress-fill--ink {
+  background-color: var(--color-studio-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studio-progress-fill {
+    transition: none !important;
+  }
+}

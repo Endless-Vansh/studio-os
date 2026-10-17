@@ -1,0 +1,94 @@
+/* STUDIO OS — Design Tokens
+   Aligned with Studio Production Atelier specification (DESIGN.md) */
+:root {
+  /* Core Brand Inks & Charcoal Rail */
+  --color-studio-ink: #141413;
+  --color-studio-ink-light: #222120;
+  --color-studio-ink-subtle: #2a2928;
+  --color-studio-ink-muted: #686560;
+  --color-studio-rail-bg: #141413;
+  --color-studio-rail-border: #2a2928;
+  --color-studio-rail-active: #1e1d1b;
+
+  /* Archival Paper Substrates */
+  --color-warm-paper: #f4f1ea;              /* Main archival vellum */
+  --color-warm-paper-light: #faf8f3;        /* Sub-surface / table header */
+  --color-warm-paper-elevated: #ffffff;     /* Active proof plates */
+  --color-warm-paper-container: #ebe6dc;    /* Card & container fill */
+  --color-warm-paper-recessed: #e3ddd2;     /* Recessed inputs, search, tracks */
+  --color-warm-paper-dark: #d5cec2;         /* Hairline structural rules (1px) */
+  --color-warm-paper-deep: #c7bfb1;
+
+  /* Studio Vermilion (Urgent, Actions, Sign-off) */
+  --color-studio-vermilion: #d94828;
+  --color-studio-vermilion-hover: #e25333;
+  --color-studio-vermilion-subtle: #fbebe7;
+  --color-studio-vermilion-border: #f3afa0;
+
+  /* Celadon Sage (Grounded progress & approvals) */
+  --color-sage: #5a7365;
+  --color-sage-light: #d8e0d9;
+  --color-sage-dark: #4b6456;
+  --color-sage-border: #b7c7b9;
+  --color-sage-text: #2c3c33;
+
+  /* Editorial Accent Tones */
+  --color-ochre: #c99341;
+  --color-ochre-subtle: #fbf5ea;
+  --color-slate-blue: #4a5c6d;
+  --color-slate-subtle: #edf2f6;
+
+  /* Functional Status */
+  --status-draft-bg: #ebe6dc;
+  --status-draft-text: #454740;
+  --status-draft-border: #d5cec2;
+
+  --status-review-bg: #fbebe7;
+  --status-review-text: #d94828;
+  --status-review-border: #f3afa0;
+
+  --status-approved-bg: #d8e0d9;
+  --status-approved-text: #2c3c33;
+  --status-approved-border: #b7c7b9;
+
+  --status-paid-bg: #d8e0d9;
+  --status-paid-text: #2c3c33;
+  --status-paid-border: #b7c7b9;
+
+  --status-overdue-bg: #fbebe7;
+  --status-overdue-text: #b02a14;
+  --status-overdue-border: #f3afa0;
+
+  /* Typography */
+  --font-serif: 'Newsreader', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Hairlines and Borders */
+  --border-hairline: 1px solid var(--color-warm-paper-dark);
+  --border-subtle: 1px solid var(--color-warm-paper-dark);
+  --border-ink: 1px solid var(--color-studio-ink);
+  --border-ink-subtle: 1px solid rgba(20, 20, 19, 0.15);
+  --border-radius-xs: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+
+  /* Focus & Interaction */
+  --focus-ring: 0 0 0 2px var(--color-warm-paper), 0 0 0 4px var(--color-studio-ink);
+  --focus-ring-vermilion: 0 0 0 2px var(--color-warm-paper), 0 0 0 4px var(--color-studio-vermilion);
+
+  /* Standardized Form & Button Heights */
+  --control-height-sm: 30px;
+  --control-height-md: 36px;
+  --control-height-lg: 42px;
+
+  /* Restrained Shadows (Tactile print layering, no artificial glows) */
+  --shadow-subtle: 0 1px 1px rgba(20, 20, 19, 0.04);
+  --shadow-card: 0 1px 2px rgba(20, 20, 19, 0.05);
+  --shadow-overlay: 0 12px 32px rgba(20, 20, 19, 0.18), 0 2px 6px rgba(20, 20, 19, 0.08);
+
+  /* Layout Structure */
+  --sidebar-width: 260px;
+  --sidebar-width-collapsed: 68px;
+  --topbar-height: 56px;
+}

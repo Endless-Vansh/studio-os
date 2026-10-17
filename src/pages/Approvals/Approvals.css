@@ -1,0 +1,146 @@
+.studio-approvals-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.studio-approvals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  gap: 1.5rem;
+}
+
+.studio-approval-card {
+  background-color: var(--color-warm-paper-elevated);
+  border: 1px solid var(--color-warm-paper-dark);
+  border-radius: var(--border-radius-xs);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.24s ease,
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.studio-approval-card:hover {
+  transform: translateY(-2px);
+  border-color: #beb7aa;
+  box-shadow: 0 8px 24px -4px rgba(20, 20, 19, 0.08), 0 2px 6px -1px rgba(20, 20, 19, 0.04);
+}
+
+.studio-approval-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.studio-approval-card__ref {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.studio-approval-card__code {
+  font-size: 0.75rem;
+  color: var(--color-studio-ink-muted);
+}
+
+.studio-approval-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.studio-approval-card__commission {
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  color: var(--color-studio-vermilion);
+  text-transform: uppercase;
+}
+
+.studio-approval-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: var(--color-studio-ink);
+}
+
+.studio-approval-card__ver {
+  font-size: 0.75rem;
+  color: var(--color-studio-ink-muted);
+}
+
+.studio-approval-card__notes {
+  font-size: 0.8125rem;
+  color: #4a4d45;
+  line-height: 1.5;
+  background-color: var(--color-warm-paper-light);
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--border-radius-xs);
+  border: 1px solid var(--color-warm-paper-dark);
+  margin-top: 0.5rem;
+}
+
+.studio-approval-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--color-warm-paper-dark);
+  border-bottom: 1px solid var(--color-warm-paper-dark);
+}
+
+.studio-approval-card__meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.75rem;
+}
+
+.studio-approval-card__signee {
+  color: var(--color-studio-ink);
+}
+
+.studio-approval-card__date {
+  color: var(--color-studio-ink-muted);
+}
+
+.studio-approval-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.studio-approval-card__signed-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-sage-text);
+  background-color: var(--color-sage-light);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--border-radius-xs);
+  border: 1px solid var(--color-sage-dark);
+}
+
+.studio-signed-icon {
+  color: var(--color-sage-text);
+}
+
+.studio-modal-alert {
+  padding: 0.85rem;
+  background-color: var(--color-warm-paper-light);
+  border: 1px solid var(--color-warm-paper-dark);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-studio-ink);
+  border-radius: var(--border-radius-xs);
+}
+
+@media (max-width: 600px) {
+  .studio-approvals-grid {
+    grid-template-columns: 1fr;
+  }
+}

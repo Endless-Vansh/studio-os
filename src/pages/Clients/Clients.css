@@ -1,0 +1,128 @@
+.studio-clients-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.studio-clients__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.studio-clients__search {
+  width: 320px;
+}
+
+.studio-clients__count {
+  font-size: 0.75rem;
+  color: var(--color-studio-ink-muted);
+}
+
+.studio-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+.studio-client-card {
+  background-color: var(--color-warm-paper-elevated);
+  border: 1px solid var(--color-warm-paper-dark);
+  border-radius: var(--border-radius-xs);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.24s ease,
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.studio-client-card:hover {
+  transform: translateY(-2px);
+  border-color: #beb7aa;
+  box-shadow: 0 8px 24px -4px rgba(20, 20, 19, 0.08), 0 2px 6px -1px rgba(20, 20, 19, 0.04);
+}
+
+.studio-client-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.studio-client-card__code {
+  font-size: 0.75rem;
+  color: var(--color-studio-ink-muted);
+}
+
+.studio-client-card__tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.studio-client-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.studio-client-card__name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-studio-ink);
+}
+
+.studio-client-card__industry {
+  font-size: 0.8125rem;
+  color: #4a4d45;
+}
+
+.studio-client-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--color-warm-paper-dark);
+  border-bottom: 1px solid var(--color-warm-paper-dark);
+}
+
+.studio-client-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.75rem;
+  color: var(--color-studio-ink-muted);
+}
+
+.studio-client-icon {
+  color: var(--color-studio-vermilion);
+  flex-shrink: 0;
+}
+
+.studio-client-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.studio-client-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.studio-client-val {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-studio-ink);
+}
+
+@media (max-width: 600px) {
+  .studio-clients-grid {
+    grid-template-columns: 1fr;
+  }
+}

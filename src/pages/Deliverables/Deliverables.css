@@ -1,0 +1,48 @@
+.studio-deliv-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.studio-td-deliv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.studio-td-deliv__title {
+  font-weight: 500;
+  color: var(--color-studio-ink);
+}
+
+.studio-td-deliv__format {
+  font-size: 0.75rem;
+  color: var(--color-studio-ink-muted);
+}
+
+.studio-td-project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.studio-td-project__title {
+  font-size: 0.8125rem;
+  color: var(--color-studio-ink);
+}
+
+.studio-td-project__client {
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  color: var(--color-studio-vermilion);
+}
+
+.studio-deliv-notes-box {
+  background-color: var(--color-warm-paper-light);
+  border: 1px solid var(--color-warm-paper-dark);
+  padding: 0.85rem;
+  border-radius: var(--border-radius-xs);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #383a34;
+}

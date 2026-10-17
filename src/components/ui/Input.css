@@ -1,0 +1,119 @@
+.studio-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.studio-input__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-studio-ink-muted);
+  font-weight: 600;
+}
+
+.studio-input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.studio-input {
+  width: 100%;
+  height: var(--control-height-md);
+  background-color: var(--color-warm-paper-elevated);
+  border: 1px solid var(--color-warm-paper-dark);
+  border-radius: var(--border-radius-xs);
+  padding: 0 12px;
+  font-size: 0.8125rem;
+  color: var(--color-studio-ink);
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+}
+
+.studio-input:focus {
+  border-color: var(--color-studio-ink);
+  box-shadow: 0 0 0 1px var(--color-studio-ink);
+  background-color: #ffffff;
+}
+
+.studio-input:disabled {
+  background-color: var(--color-warm-paper-light);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.studio-input::placeholder {
+  color: #8c8e87;
+}
+
+.studio-input--has-left {
+  padding-left: 34px;
+}
+
+.studio-input--has-right {
+  padding-right: 34px;
+}
+
+.studio-input__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-studio-ink-muted);
+  pointer-events: none;
+}
+
+.studio-input__icon--left {
+  left: 10px;
+}
+
+.studio-input__icon--right {
+  right: 10px;
+}
+
+.studio-select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 28px;
+}
+
+.studio-select:focus {
+  border-color: var(--color-studio-ink);
+  box-shadow: 0 0 0 1px var(--color-studio-ink);
+}
+
+.studio-select__arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: var(--color-studio-ink-muted);
+  pointer-events: none;
+}
+
+.studio-input__error-msg {
+  font-size: 0.75rem;
+  color: var(--color-studio-vermilion);
+  font-weight: 500;
+}
+
+.studio-input__helper-msg {
+  font-size: 0.75rem;
+  color: var(--color-studio-ink-muted);
+}
+
+.studio-input-group--error .studio-input {
+  border-color: var(--color-studio-vermilion);
+  background-color: #fdf8f6;
+}
+
+.studio-input-group--error .studio-input:focus {
+  box-shadow: 0 0 0 1px var(--color-studio-vermilion);
+}

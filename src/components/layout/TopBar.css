@@ -1,0 +1,208 @@
+/* STUDIO OS — TopBar Archival Header */
+
+.studio-topbar {
+  height: var(--topbar-height);
+  background-color: var(--color-warm-paper);
+  border-bottom: 1px solid var(--color-warm-paper-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.studio-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.studio-topbar__hamburger {
+  display: none;
+  color: var(--color-studio-ink);
+  padding: 6px;
+  border-radius: var(--border-radius-xs);
+  transition: background-color 0.15s ease;
+}
+
+.studio-topbar__hamburger:hover {
+  background-color: var(--color-warm-paper-recessed);
+}
+
+.studio-topbar__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.studio-topbar__crumb-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-studio-vermilion);
+  flex-shrink: 0;
+}
+
+.studio-topbar__crumb-path {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-studio-ink);
+  font-weight: 600;
+}
+
+/* Recessed Archival Search Input */
+.studio-topbar__center {
+  flex: 1;
+  max-width: 380px;
+}
+
+.studio-topbar__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.studio-topbar__search-icon {
+  position: absolute;
+  left: 10px;
+  color: #7d7a74;
+  pointer-events: none;
+}
+
+.studio-topbar__search-input {
+  width: 100%;
+  height: 32px;
+  background-color: var(--color-warm-paper-recessed);
+  border: 1px solid var(--color-warm-paper-dark);
+  border-radius: 3px;
+  padding: 0 42px 0 32px;
+  font-size: 0.75rem;
+  color: var(--color-studio-ink);
+  transition: background-color 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.studio-topbar__search-input::placeholder {
+  color: #827e77;
+}
+
+.studio-topbar__search-input:focus {
+  background-color: #ffffff;
+  border-color: var(--color-studio-ink);
+  box-shadow: 0 0 0 1px var(--color-studio-ink), 0 2px 8px rgba(20, 20, 19, 0.05);
+}
+
+.studio-topbar__search-shortcut {
+  position: absolute;
+  right: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.05em;
+  color: #6a6761;
+  background-color: #d8d2c6;
+  padding: 2px 5px;
+  border-radius: 2px;
+  pointer-events: none;
+  font-weight: 600;
+}
+
+/* Multi-City Studio Clocks */
+.studio-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.studio-topbar__clocks {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+}
+
+.studio-topbar__clock-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.06em;
+  color: #686560;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.studio-topbar__clock-item:hover {
+  color: var(--color-studio-ink);
+}
+
+.studio-topbar__clock-bullet {
+  color: var(--color-warm-paper-dark);
+  font-weight: bold;
+}
+
+.studio-topbar__clock-item--active {
+  color: var(--color-studio-ink);
+  font-weight: 600;
+}
+
+.studio-topbar__time-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-studio-vermilion);
+  animation: studioPulseDot 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.studio-topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1100px) {
+  .studio-topbar__clocks .studio-topbar__clock-item:not(.studio-topbar__clock-item--active) {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .studio-topbar__hamburger {
+    display: flex;
+  }
+
+  .studio-topbar__center {
+    display: none;
+  }
+
+  .studio-topbar__clocks {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .studio-topbar {
+    padding: 0 0.85rem;
+    gap: 0.75rem;
+  }
+
+  .studio-topbar__crumb-path {
+    max-width: 135px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .studio-topbar__actions button:first-child,
+  .studio-topbar__actions button:nth-child(2) {
+    display: none;
+  }
+}

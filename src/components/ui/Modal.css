@@ -1,0 +1,103 @@
+.studio-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(25, 26, 24, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.studio-modal {
+  background-color: var(--color-warm-paper-light);
+  border: 1px solid var(--color-warm-paper-dark);
+  box-shadow: var(--shadow-overlay);
+  border-radius: var(--border-radius-xs);
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.studio-modal--sm { max-width: 440px; }
+.studio-modal--md { max-width: 580px; }
+.studio-modal--lg { max-width: 760px; }
+.studio-modal--xl { max-width: 960px; }
+
+.studio-modal__header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-warm-paper-dark);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--color-warm-paper-elevated);
+}
+
+.studio-modal__title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--color-studio-ink);
+  line-height: 1.2;
+}
+
+.studio-modal__subtitle {
+  font-size: 0.8125rem;
+  color: var(--color-studio-ink-muted);
+  margin-top: 0.25rem;
+}
+
+.studio-modal__close-btn {
+  color: var(--color-studio-ink-muted);
+  padding: 4px;
+  border-radius: var(--border-radius-xs);
+  transition: color 0.15s ease;
+  display: flex;
+  align-items: center;
+}
+
+.studio-modal__close-btn:hover {
+  color: var(--color-studio-ink);
+}
+
+.studio-modal__body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.studio-modal__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-warm-paper-dark);
+  background-color: var(--color-warm-paper);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .studio-modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .studio-modal {
+    max-height: 95vh;
+  }
+
+  .studio-modal__header {
+    padding: 1rem 1.25rem;
+  }
+
+  .studio-modal__body {
+    padding: 1.25rem;
+  }
+
+  .studio-modal__footer {
+    padding: 0.85rem 1.25rem;
+    flex-wrap: wrap;
+  }
+}

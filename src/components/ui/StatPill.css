@@ -1,0 +1,158 @@
+/* STUDIO OS — StatPill Editorial Metric Cards */
+
+.studio-stat-pill {
+  display: flex;
+  flex-direction: column;
+  padding: 1.15rem 1.35rem;
+  background-color: var(--color-warm-paper-elevated);
+  border: 1px solid var(--color-warm-paper-dark);
+  border-radius: var(--border-radius-xs);
+  transition: border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.studio-stat-pill:hover {
+  transform: translateY(-2px);
+  border-color: #beb7aa;
+  box-shadow: 0 6px 20px -2px rgba(20, 20, 19, 0.07), 0 2px 6px -1px rgba(20, 20, 19, 0.04);
+}
+
+.studio-stat-pill__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.studio-stat-pill__label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-studio-ink-muted);
+  font-weight: 600;
+}
+
+.studio-stat-pill__icon {
+  color: #8c8983;
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+
+.studio-stat-pill:hover .studio-stat-pill__icon {
+  color: var(--color-studio-ink);
+  transform: scale(1.08);
+}
+
+.studio-stat-pill--ink:hover .studio-stat-pill__icon {
+  color: var(--color-warm-paper);
+}
+
+.studio-stat-pill__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.studio-stat-pill__value {
+  font-family: var(--font-serif);
+  font-size: 2.125rem;
+  line-height: 1.1;
+  font-weight: 400;
+  color: var(--color-studio-ink);
+  letter-spacing: -0.02em;
+}
+
+/* Badge beside value */
+.studio-stat-pill__badge {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 2px;
+  line-height: 1.25;
+}
+
+.studio-stat-pill__badge--sage {
+  background-color: var(--color-sage-light);
+  color: var(--color-sage-text);
+  border: 1px solid var(--color-sage-border);
+}
+
+.studio-stat-pill__badge--vermilion {
+  background-color: var(--color-studio-vermilion-subtle);
+  color: var(--color-studio-vermilion);
+  border: 1px solid var(--color-studio-vermilion-border);
+}
+
+.studio-stat-pill__badge--neutral {
+  background-color: var(--color-warm-paper-recessed);
+  color: var(--color-studio-ink-muted);
+  border: 1px solid var(--color-warm-paper-dark);
+}
+
+/* Progress track wrapper */
+.studio-stat-pill__progress-wrap {
+  margin-top: 0.65rem;
+}
+
+/* Subtext & Bullet */
+.studio-stat-pill__subtext {
+  font-size: 0.75rem;
+  color: #55524c;
+  margin-top: 0.45rem;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.studio-stat-pill__bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-studio-vermilion);
+  flex-shrink: 0;
+  animation: studioPulseDot 3s infinite;
+}
+
+/* Variant Accents */
+.studio-stat-pill--vermilion .studio-stat-pill__value {
+  color: var(--color-studio-vermilion);
+}
+
+.studio-stat-pill--sage {
+  background-color: #faf8f5;
+}
+
+/* Dark Carbon Card Variant (Level 3 Archival Surface) */
+.studio-stat-pill--ink {
+  background-color: var(--color-studio-ink);
+  border-color: #2a2928;
+}
+
+.studio-stat-pill--ink:hover {
+  transform: translateY(-2px);
+  border-color: #44423e;
+  box-shadow: 0 8px 24px -2px rgba(0, 0, 0, 0.25);
+}
+
+.studio-stat-pill--ink .studio-stat-pill__label {
+  color: #8c8983;
+}
+
+.studio-stat-pill--ink .studio-stat-pill__icon {
+  color: #7b7872;
+}
+
+.studio-stat-pill--ink .studio-stat-pill__value {
+  color: var(--color-warm-paper);
+}
+
+.studio-stat-pill--ink .studio-stat-pill__subtext {
+  color: #8c8983;
+}

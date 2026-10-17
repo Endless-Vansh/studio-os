@@ -1,0 +1,62 @@
+.studio-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--border-radius-xs);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  border: 1px solid transparent;
+}
+
+.studio-alert__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.studio-alert__content {
+  flex: 1;
+}
+
+.studio-alert__title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  margin-bottom: 0.2rem;
+}
+
+.studio-alert__text {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.studio-alert__action {
+  margin-left: auto;
+}
+
+/* Variants */
+.studio-alert--neutral {
+  background-color: var(--color-warm-paper-light);
+  border-color: var(--color-warm-paper-dark);
+  color: var(--color-studio-ink);
+}
+
+.studio-alert--vermilion {
+  background-color: var(--color-studio-vermilion-subtle);
+  border-color: var(--color-studio-vermilion-border);
+  color: var(--color-studio-vermilion);
+}
+
+.studio-alert--sage {
+  background-color: var(--color-sage-light);
+  border-color: var(--color-sage-dark);
+  color: var(--color-sage-text);
+}
+
+.studio-alert--ink {
+  background-color: var(--color-studio-ink);
+  border-color: var(--color-studio-ink);
+  color: var(--color-warm-paper);
+}
